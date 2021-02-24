@@ -1,17 +1,25 @@
-import React, { Component } from "react";
-import "../../styles/homepage.css";
-import PageTitle from "./page-title";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { CssBaseline } from "@material-ui/core";
 
-class HomePage extends Component {
-  render() {
-    // console.log(this.props.match.params.slug);
-    return (
-      <div className="homepage-wrapper">
-        <PageTitle className="home-page" title="Home Page" />
+import Header from "../header";
 
-      </div>
-    );
-  }
+const useStyles = makeStyles(theme => ({
+  root: {
+    minHeight: "100vh",
+    backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/bg.jpg"})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  },
+}));
+
+export default function HomePage() {
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      {/* eliminate padding and margin */}
+      <CssBaseline />
+      <Header />
+    </div>
+  );
 }
-
-export default HomePage;
