@@ -1,28 +1,23 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { withRouter } from "react-router";
 
 import PageTitle from "./page-title";
 
 class ArticlePage extends Component {
-  /* constructor(match, ...props) {
-    super(...props); */
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-  static propTypes = {
-    name: PropTypes.object.isRequired,
-    /* location: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired, 
-  }; */
-  };
   render() {
-    let { name } = this.props;
+    // console.log("Object": ", this.props.match.params.slug);
+
     return (
       <div>
-        <h1>You are now at {name} page!</h1>
         <PageTitle className="article-page" title="Article Page" />
+        <h1> {this.props.match.params.slug} </h1>
       </div>
     );
   }
 }
 
-export default withRouter(ArticlePage);
+export default ArticlePage;
