@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 //MATERIAL UI
 import { AppBar, IconButton, makeStyles, Toolbar } from "@material-ui/core";
-import SortIcon from "@material-ui/icons/Sort";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import Collapse from "@material-ui/core/Collapse";
 
+import NavBar from "./navbar";
 const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
@@ -56,9 +56,7 @@ export default function Header() {
       <AppBar className={classes.appbar}>
         <Toolbar className={classes.appbarWrapper}>
           <h1 className={classes.appbarTitle}>Dev.Admin</h1>
-          <IconButton>
-            <SortIcon className={classes.icon} />
-          </IconButton>
+          <NavBar />
         </Toolbar>
       </AppBar>
       <Collapse
