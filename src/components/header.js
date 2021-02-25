@@ -56,8 +56,8 @@ export default function Header() {
       <AppBar className={classes.appbar}>
         <Toolbar className={classes.appbarWrapper}>
           <h1 className={classes.appbarTitle}>Dev.Admin</h1>
-          <NavBar />
         </Toolbar>
+        <NavBar />
       </AppBar>
       <Collapse
         in={checked}

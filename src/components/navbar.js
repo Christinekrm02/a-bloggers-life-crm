@@ -1,26 +1,35 @@
 import React, { Component } from "react";
-//import "../styles/navbar.css";
+import "../styles/navbar.css";
 import { Link } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
 
 class NavBar extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar">
-          <ul className="navbar__nav">
-            <li className="navbar__nav-item">
+      <div className="navbar-wrapper">
+        <Nav variant="pills" defaultActiveKey="/home">
+          <Nav.Item>
+            <Nav.Link>
               <Link className="navbar_navlink active" to="/">
                 Home
               </Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
               <Link className="navbar_navlink" to="/about">
                 About
               </Link>
-              <Link className="navbar_navlink" to="/articles/articles-list">
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link className="navbar_navlink" to="/articles-list">
                 Articles
               </Link>
-            </li>
-          </ul>
-        </nav>
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
       </div>
     );
   }
