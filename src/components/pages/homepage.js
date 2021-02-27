@@ -16,6 +16,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
+    fontFamily: "Ubuntu, sans-serif",
   },
   articleTitleContainer: {
     textAlign: "center",
@@ -45,7 +46,7 @@ export default function HomePage() {
       <Header />
       <Collapse
         in={checked}
-        {...(checked ? { timeout: 2000 } : {})}
+        {...(checked ? { timeout: 1500 } : {})}
         collapsedHeight={50}>
         <div className={classes.articleTitleContainer}>
           <h1 className={classes.articleTitle}>Build Your Very Own Blog App</h1>

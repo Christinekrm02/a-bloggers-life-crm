@@ -1,40 +1,33 @@
 import React, { Component } from "react";
 import { CssBaseline } from "@material-ui/core";
 import "../../styles/about.css";
-import movieapp from "../../assets/movieapp.jpg";
+
+//import movieapp from "../../assets/movieapp.jpg";
+import ProjectCard from "../cards/card.js";
 
 import Header from "../header-nav";
 
 class AboutPage extends Component {
   render() {
+    const otherStyles = {
+      color: "#8A2BE2",
+      fontSize: "22px",
+      padding: "10px",
+    };
     return (
-      <div className="about-page-wrapper">
-        <CssBaseline />
-        <Header />
-        <div className="about-section">
-          <h1>About Us Page</h1>
-          <p>Some text about who we are and what we do.</p>
-          <p>
-            Resize the browser window to see that this page is responsive by the
-            way.
-          </p>
-        </div>
-        <h2 className="about-heading">Check Out My Other Projects</h2>
-        <div className="row">
-          <div className="column">
-            <div className="card">
-              <img src={movieapp} />
-              <div className="container">
-                <h2>Jane Doe</h2>
-                <p className="title">CEO & Founder</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>jane@example.com</p>
-                <p>
-                  <button className="button">Contact</button>
-                </p>
-              </div>
-            </div>
+      <div>
+        <div className="about-page-intro">
+          <CssBaseline />
+          <Header />
+          <div className="about-section">
+            <h1>What is Dev.Admin?</h1>
+            <p>
+              Dev.Admin serves to educate inspiring web developers by creating
+              fullstack web projects with step by step instructions.
+            </p>
+            <h3 style={otherStyles}>Check out some of my other projects.</h3>
           </div>
+          <ProjectCard />
         </div>
       </div>
     );
