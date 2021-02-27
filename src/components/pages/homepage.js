@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 
-import Header from "../header.js";
+import Header from "../header-nav.js";
 
 const useStyles = makeStyles(theme => ({
   root: {

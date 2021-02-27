@@ -53,8 +53,10 @@ const useStyles = makeStyles(theme => ({
   navLink: {
     textDecoration: `none`,
     textTransform: `uppercase`,
+    fontSize: "20px",
     color: `#8A2BE2`,
   },
+
   articleTitleContainer: {
     textAlign: "center",
   },
@@ -82,7 +84,6 @@ export default function Header() {
         <Container>
           <Toolbar className={classes.appbarWrapper}>
             <h1 className={classes.appbarTitle}>Dev.Admin</h1>
-
             <List
               component="nav"
               aria-labelledby="main navigation"
@@ -90,7 +91,10 @@ export default function Header() {
               {navLinks.map(({ title, path }) => (
                 <a href={path} key={title} className={classes.navLink}>
                   <ListItem button>
-                    <ListItemText primary={title} />
+                    <ListItemText
+                      primary={title}
+                      className={classes.listItem}
+                    />
                   </ListItem>
                 </a>
               ))}
@@ -100,7 +104,7 @@ export default function Header() {
       </AppBar>
       <Collapse
         in={checked}
-        {...(checked ? { timeout: 1000 } : {})}
+        {...(checked ? { timeout: 2000 } : {})}
         collapsedHeight={50}>
         <div className={classes.articleTitleContainer}>
           <h1 className={classes.articleTitle}>Build Your Very Own Blog App</h1>
