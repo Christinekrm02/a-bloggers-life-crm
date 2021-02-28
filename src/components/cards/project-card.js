@@ -9,7 +9,7 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 370,
+    maxWidth: 400,
   },
   media: {
     height: 240,
@@ -26,15 +26,15 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ProjectCard() {
+export default function ProjectCard(/*projects*/) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardMedia
         className={classes.media}
-        title="Contemplative Reptile"
         image={process.env.PUBLIC_URL + "/assets/movieapp.jpg"}
+        title="Contemplative Reptile"
       />
       <CardContent>
         <Typography
@@ -42,15 +42,17 @@ export default function ProjectCard() {
           variant="h5"
           component="h2"
           className={classes.title}>
-          Lizard
+          {/* {projects.title} */}
+          The Theaters are Open!
         </Typography>
         <Typography
           variant="body2"
           color="textSecondary"
           component="h1"
           className={classes.description}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {/*projects.description*/}
+          2020 is over, movie theaters are set to reopen in 2021! Find reviews
+          for new and old movies with a simple search.
         </Typography>
       </CardContent>
       <CardActions>

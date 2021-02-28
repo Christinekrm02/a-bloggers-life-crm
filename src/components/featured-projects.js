@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import projects from "../static/projects.js";
 import ProjectCard from "./cards/project-card.js";
 
 const useStyles = makeStyles(theme => ({
@@ -13,7 +14,7 @@ export default function FeaturedProjects() {
     <div>
       return(
       <div className={classes.root}>
-        <ProjectCard />
+        <ProjectCard projects={projects[0]} />
       </div>
       )
     </div>
