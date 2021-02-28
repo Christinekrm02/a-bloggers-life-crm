@@ -3,7 +3,7 @@ import { CssBaseline } from "@material-ui/core";
 import "../../styles/about.css";
 
 //import movieapp from "../../assets/movieapp.jpg";
-import ProjectCard from "../cards/card.js";
+import ProjectCard from "../cards/project-card.js";
 
 import Header from "../header-nav";
 
