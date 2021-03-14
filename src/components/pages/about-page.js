@@ -4,7 +4,6 @@ import "../../styles/about.css";
 
 import ProjectCard from "../cards/project-card.js";
 
-
 import Header from "../header-nav";
 
 class AboutPage extends Component {
@@ -15,7 +14,7 @@ class AboutPage extends Component {
       padding: "10px",
     };
     return (
-      <div>
+      <>
         <div className="about-page-intro">
           <CssBaseline />
           <Header />
@@ -25,11 +24,13 @@ class AboutPage extends Component {
               Dev.Admin serves to educate inspiring web developers by creating
               fullstack web projects with step by step instructions.
             </p>
-            <h3 style={otherStyles}>Check out some of my other projects.</h3>
           </div>
-          <ProjectCard />
+          <div className="featured-projects">
+            <h3 style={otherStyles}>Check out some of my other projects.</h3>
+            <ProjectCard />
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }
