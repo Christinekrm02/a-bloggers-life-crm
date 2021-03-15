@@ -22,7 +22,7 @@ class App extends Component {
             <Route path="/about" exact component={AboutPage} />
             <Route path="/articles-list" exact component={ArticlesListPage} />
             <Route path="/article/:slug" exact component={ArticlePage} />
-            <Route exact component={Error404} />
+            <Route component={Error404} />
           </Switch>
         </div>
       </Router>

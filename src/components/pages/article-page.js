@@ -3,6 +3,7 @@ import React from "react";
 import PageTitle from "./page-title";
 import articles from "./article-content";
 import ArticlesList from "../articles-list";
+import Error404 from "./error-404";
 //import Header from "../header-nav";
 
 export default function ArticlePage({ match }) {
@@ -16,6 +17,9 @@ export default function ArticlePage({ match }) {
 
   //GET OTHER ARTICLES
   const relatedArticles = articles.filter(article => article.name !== slug);
+
+  if (!article) return <Error404 />;
+
   return (
     <div>
       {/* <Header /> */}
