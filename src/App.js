@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
 //import NavBar from "./navbar";
-import ArticlesList from "./components/pages/articles-list";
+//import Header from "../src/components/header-nav";
+import ArticlesListPage from "./components/pages/articles-list-page";
 import ArticlePage from "./components/pages/article-page";
 import AboutPage from "./components/pages/about-page";
 import HomePage from "./components/pages/homepage";
@@ -15,11 +16,11 @@ class App extends Component {
       <Router>
         <div className="App">
           <Switch>
-            {/* <NavBar /> */}
+            {/* <Header />*/}
             <Route path="/" exact component={HomePage} />
             {/* <Route path="/home/:slug" exact component={HomePage} /> */}
             <Route path="/about" exact component={AboutPage} />
-            <Route path="/articles-list" exact component={ArticlesList} />
+            <Route path="/articles-list" exact component={ArticlesListPage} />
             <Route path="/article/:slug" exact component={ArticlePage} />
             <Route exact component={Error404} />
           </Switch>

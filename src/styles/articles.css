@@ -1,0 +1,37 @@
+.about-page-intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: "100vh";
+    font-size: 16px;
+  }
+  h2 {
+    text-align: center;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    color: black;
+    margin-top: -364px;
+  }
+  .featured-projects {
+    height: "100vh";
+    font-size: 16px;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
